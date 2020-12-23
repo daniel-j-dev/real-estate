@@ -1,3 +1,17 @@
 .App {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #F5F9FF;
+  color: #494949;
+}
+
+.App > #upper {
+  width: 100%;
+  padding: 0px 20px 0px 20px;
+}
+
+* {
+  font-family: 'Poppins';
 }

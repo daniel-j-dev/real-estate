@@ -8,10 +8,12 @@ import "./App.css"
 function App() {
   return (
     <div className="App">
-      <Header />
-      <Search />
-      <PropertyType />
-      <PriceRange />
+      <div id="upper">
+        <Header />
+        <Search />
+        <PropertyType />
+        <PriceRange />
+      </div>
       <Results />
     </div>
   )

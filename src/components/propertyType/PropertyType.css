@@ -1,0 +1,20 @@
+#property-types {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+  }
+  
+  #property-types > button {
+    outline: none;
+    border: none;
+    border-radius: 20px;
+    padding: 18px;
+    background-color: white;
+  }
+  
+  #property-types > #selected {
+    color: #287eff;
+    background-color: #c3dbff !important;
+  }
+  

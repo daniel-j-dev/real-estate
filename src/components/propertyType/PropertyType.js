@@ -1,12 +1,17 @@
-import React from 'react'
-import './PropertyType.css'
+import React from "react"
+import "./PropertyType.css"
 
 const PropertyType = () => {
-    return (
-        <div>
-            
-        </div>
-    )
+  return (
+    <div>
+      <h4>Property</h4>
+      <div id="property-types">
+        <button>House</button>
+        <button id="selected">Appartment</button>
+        <button>Room</button>
+      </div>
+    </div>
+  )
 }
 
 export default PropertyType
