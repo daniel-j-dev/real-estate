@@ -8,8 +8,53 @@ import PropertyType from "./components/propertyType/PropertyType"
 import PriceRange from "./components/priceRange/PriceRange"
 import Results from "./components/results/Results"
 
+import apt from './assets/apt-1.jpeg'
+
 function App() {
-  const [listings, setListings] = useState([])
+  const [listings, setListings] = useState([
+    {
+      image: apt,
+      price: 3560,
+      address: "345 Hamilton Str.",
+      sqFeet: 1211,
+    },
+    {
+      image: apt,
+      price: 3560,
+      address: "345 Hamilton Str.",
+      sqFeet: 1211,
+    },
+    {
+      image: apt,
+      price: 3560,
+      address: "345 Hamilton Str.",
+      sqFeet: 1211,
+    },
+    {
+      image: apt,
+      price: 3560,
+      address: "345 Hamilton Str.",
+      sqFeet: 1211,
+    },
+    {
+      image: apt,
+      price: 3560,
+      address: "345 Hamilton Str.",
+      sqFeet: 1211,
+    },
+    {
+      image: apt,
+      price: 3560,
+      address: "345 Hamilton Str.",
+      sqFeet: 1211,
+    },
+    {
+      image: apt,
+      price: 3560,
+      address: "345 Hamilton Str.",
+      sqFeet: 1211,
+    },
+  ])
 
   const [settings] = useState({
     priceRange: {

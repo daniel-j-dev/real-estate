@@ -1,0 +1,38 @@
+#result-item {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 140px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+
+#result-item > img {
+    height: auto;
+    width: 50%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+#result-item > #details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-left: 10px;
+    width: 40%;
+}
+
+#result-item > #details > #price {
+    margin-top: 0px;
+}
+
+#result-item > #details > p {
+    font-size: 14px;
+    margin: 0px;
+}
+
+#result-item > #details > #address {
+    margin-bottom: 5px;
+}
