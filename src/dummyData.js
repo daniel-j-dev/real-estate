@@ -1,0 +1,180 @@
+import apt from './assets/apt-1.jpeg'
+
+const dummyData = [
+  {
+    image: apt,
+    price: 846,
+    address: "345 Hamilton Str.",
+    sqFeet: 1211,
+  },
+  {
+    image: apt,
+    price: 846,
+    address: "345 Hamilton Str.",
+    sqFeet: 1211,
+  },
+  {
+    image: apt,
+    price: 1300,
+    address: "345 Hamilton Str.",
+    sqFeet: 1211,
+  },
+  {
+    image: apt,
+    price: 1350,
+    address: "345 Hamilton Str.",
+    sqFeet: 1211,
+  },
+  {
+    image: apt,
+    price: 1400,
+    address: "345 Hamilton Str.",
+    sqFeet: 1211,
+  },
+  {
+    image: apt,
+    price: 1400,
+    address: "345 Hamilton Str.",
+    sqFeet: 1211,
+  },
+  {
+    image: apt,
+    price: 1450,
+    address: "345 Hamilton Str.",
+    sqFeet: 1211,
+  },
+  {
+    image: apt,
+    price: 1450,
+    address: "345 Hamilton Str.",
+    sqFeet: 1211,
+  },
+  {
+    image: apt,
+    price: 1450,
+    address: "345 Hamilton Str.",
+    sqFeet: 1211,
+  },
+  {
+    image: apt,
+    price: 1500,
+    address: "345 Hamilton Str.",
+    sqFeet: 1211,
+  },
+  {
+    image: apt,
+    price: 1500,
+    address: "345 Hamilton Str.",
+    sqFeet: 1211,
+  },
+  {
+    image: apt,
+    price: 1500,
+    address: "345 Hamilton Str.",
+    sqFeet: 1211,
+  },
+  {
+    image: apt,
+    price: 1500,
+    address: "345 Hamilton Str.",
+    sqFeet: 1211,
+  },
+  {
+    image: apt,
+    price: 1500,
+    address: "345 Hamilton Str.",
+    sqFeet: 1211,
+  },
+  {
+    image: apt,
+    price: 1550,
+    address: "345 Hamilton Str.",
+    sqFeet: 1211,
+  },
+  {
+    image: apt,
+    price: 1550,
+    address: "345 Hamilton Str.",
+    sqFeet: 1211,
+  },
+  {
+    image: apt,
+    price: 1550,
+    address: "345 Hamilton Str.",
+    sqFeet: 1211,
+  },
+  {
+    image: apt,
+    price: 1550,
+    address: "345 Hamilton Str.",
+    sqFeet: 1211,
+  },
+  {
+    image: apt,
+    price: 1550,
+    address: "345 Hamilton Str.",
+    sqFeet: 1211,
+  },
+  {
+    image: apt,
+    price: 1550,
+    address: "345 Hamilton Str.",
+    sqFeet: 1211,
+  },
+  {
+    image: apt,
+    price: 1600,
+    address: "345 Hamilton Str.",
+    sqFeet: 1211,
+  },
+  {
+    image: apt,
+    price: 1600,
+    address: "345 Hamilton Str.",
+    sqFeet: 1211,
+  },
+  {
+    image: apt,
+    price: 1650,
+    address: "345 Hamilton Str.",
+    sqFeet: 1211,
+  },
+  {
+    image: apt,
+    price: 1750,
+    address: "345 Hamilton Str.",
+    sqFeet: 1211,
+  },
+  {
+    image: apt,
+    price: 960,
+    address: "345 Hamilton Str.",
+    sqFeet: 1211,
+  },
+  {
+    image: apt,
+    price: 2392,
+    address: "345 Hamilton Str.",
+    sqFeet: 1211,
+  },
+  {
+    image: apt,
+    price: 2392,
+    address: "345 Hamilton Str.",
+    sqFeet: 1211,
+  },
+  {
+    image: apt,
+    price: 2200,
+    address: "345 Hamilton Str.",
+    sqFeet: 1211,
+  },
+  {
+    image: apt,
+    price: 2250,
+    address: "345 Hamilton Str.",
+    sqFeet: 1211,
+  },
+]
+
+export default dummyData

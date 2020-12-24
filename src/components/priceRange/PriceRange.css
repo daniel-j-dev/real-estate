@@ -3,7 +3,7 @@
 }
 
 #price-range-container > h4 {
-  margin-bottom: 56px;
+  margin-bottom: 8px;
 }
 
 #price-range-container > #range-labels {
@@ -12,4 +12,18 @@
   font-size: 12px;
   margin-top: 10px;
   color: #49494994;
+}
+
+#price-range-container > #priceBars {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 100%;
+  height: 68px;
+}
+
+#price-range-container > #priceBars > .bar {
+  width: 4px;
+  background-color: #287eff;
+  border-radius: 20px;
 }

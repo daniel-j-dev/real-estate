@@ -1,11 +1,11 @@
-import React, { useContext } from "react"
+import React, { useContext, useEffect } from "react"
 import AppContext from "../../contexts/AppContext"
 import Slider from "rc-slider"
 import "rc-slider/assets/index.css"
 import "./PriceRange.css"
 
 const PriceRange = () => {
-  const { settings } = useContext(AppContext)
+  const { settings, priceBars } = useContext(AppContext)
 
   const { min, max, dLeftVal, dRightVal } = settings.priceRange
 
@@ -14,9 +14,27 @@ const PriceRange = () => {
 
   const handleChanges = (value) => {}
 
+  let highestBarVal = -Infinity;
+
+  for (let i=0; i<priceBars.length; i++) {
+    if (priceBars[i] > highestBarVal) highestBarVal = priceBars[i]
+  }
+
   return (
     <div id="price-range-container">
       <h4>Price range</h4>
+      <div id="priceBars">
+        {priceBars.map((val, index) => (
+          <div
+            key={index}
+            className="bar"
+            style={{
+              height: `${(val/highestBarVal)*100}%`,
+            }}
+            value={val}
+          ></div>
+        ))}
+      </div>
       <Range
         allowCross={false}
         min={min}
@@ -40,7 +58,7 @@ const PriceRange = () => {
         ]}
         onChange={(value) => handleChanges(value)}
       />
-      <div id='range-labels'>
+      <div id="range-labels">
         <label>{`$${min.toLocaleString()}`}</label>
         <label>{`$${max.toLocaleString()}`}</label>
       </div>
