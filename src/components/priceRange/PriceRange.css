@@ -1,3 +1,15 @@
 #price-range-container {
-  margin-bottom: 20px;
+  margin-bottom: 26px;
+}
+
+#price-range-container > h4 {
+  margin-bottom: 56px;
+}
+
+#price-range-container > #range-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  margin-top: 10px;
+  color: #49494994;
 }

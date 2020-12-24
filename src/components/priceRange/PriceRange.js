@@ -1,6 +1,6 @@
 import React, { useContext } from "react"
 import AppContext from "../../contexts/AppContext"
-import Slider, { createSliderWithTooltip } from "rc-slider"
+import Slider from "rc-slider"
 import "rc-slider/assets/index.css"
 import "./PriceRange.css"
 
@@ -9,7 +9,8 @@ const PriceRange = () => {
 
   const { min, max, dLeftVal, dRightVal } = settings.priceRange
 
-  const Range = createSliderWithTooltip(Slider.Range)
+  //const Range = createSliderWithTooltip(Slider.Range)
+  const Range = Slider.Range
 
   const handleChanges = (value) => {}
 
@@ -21,9 +22,28 @@ const PriceRange = () => {
         min={min}
         max={max}
         defaultValue={[dLeftVal, dRightVal]}
-        tipFormatter={(value) => `$${value.toLocaleString()}`}
+        handleStyle={[
+          {
+            backgroundColor: "#287EFF",
+          },
+          {
+            backgroundColor: "#287EFF",
+          },
+        ]}
+        railStyle={{
+          backgroundColor: "#287EFF",
+        }}
+        trackStyle={[
+          {
+            backgroundColor: "#287EFF",
+          },
+        ]}
         onChange={(value) => handleChanges(value)}
       />
+      <div id='range-labels'>
+        <label>{`$${min.toLocaleString()}`}</label>
+        <label>{`$${max.toLocaleString()}`}</label>
+      </div>
     </div>
   )
 }
