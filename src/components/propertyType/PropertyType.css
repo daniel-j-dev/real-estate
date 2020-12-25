@@ -13,7 +13,7 @@
     background-color: white;
   }
   
-  #property-types > #selected {
+  #property-types > button:disabled {
     color: #287eff;
     background-color: #c3dbff !important;
   }

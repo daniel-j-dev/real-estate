@@ -12,6 +12,7 @@ import dummyData from "./dummyData"
 
 function App() {
   const [settings, setSettings] = useState({
+    propSearchType: 'apt',
     priceRange: {
       //Settings updates approprately based on listings
       min: 846, //Lowest price in listings
