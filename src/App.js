@@ -46,35 +46,19 @@ function App() {
     newSettings.priceRange.max = maxPrice
 
     setSettings({ ...newSettings })
-
-    //// --Assigning appropriate height to each bar in the chart
-
-    let newPriceBars = new Array(settings.priceRange.amtOfBars).fill([1]).flat()
-
-    const barPercent = 1 / (settings.priceRange.amtOfBars - 1) //The percent of the data each bar will represent. Minus 1 because of index starting at 0. Dividing into 1 to get percent as a decimal.
-
-    for (let i = 0; i < listings.length; i++) {
-      // Finding the percent of the way this price is between the min price and max price. In English, we're finding out which bar in the distribution chart that this listing should add to.
-      const valPercent =
-        (listings[i].price - settings.priceRange.min) /
-        (settings.priceRange.max - settings.priceRange.min)
-
-      //Translating the percent above to the bar index
-      const barIndex = Math.ceil(valPercent / barPercent)
-
-      console.log(`barIndex: ${barIndex}`)
-
-      //Adding 1 to the correct bar
-      newPriceBars[barIndex]++
-    }
-
-    setPriceBars([...newPriceBars])
-  }, [])
+  }, [listings])
 
   return (
     <div className="App">
       <AppContext.Provider
-        value={{ settings, setSettings, listings, setListings, priceBars }}
+        value={{
+          settings,
+          setSettings,
+          listings,
+          setListings,
+          priceBars,
+          setPriceBars,
+        }}
       >
         <div id="upper">
           <Header />

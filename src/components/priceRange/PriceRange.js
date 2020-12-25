@@ -5,11 +5,40 @@ import "rc-slider/assets/index.css"
 import "./PriceRange.css"
 
 const PriceRange = () => {
-  const { settings, setSettings, priceBars } = useContext(AppContext)
+  const {
+    settings,
+    setSettings,
+    listings,
+    priceBars,
+    setPriceBars,
+  } = useContext(AppContext)
 
   const { min, max, leftVal, rightVal } = settings.priceRange
 
-  const Range = Slider.Range
+  useEffect(() => {
+    //// --Assigning appropriate height to each bar in the chart
+
+    let newPriceBars = new Array(settings.priceRange.amtOfBars).fill([1]).flat()
+
+    const barPercent = 1 / (settings.priceRange.amtOfBars - 1) //The percent of the data each bar will represent. Minus 1 because of index starting at 0. Dividing into 1 to get percent as a decimal.
+
+    for (let i = 0; i < listings.length; i++) {
+      // Finding the percent of the way this price is between the min price and max price. In English, we're finding out which bar in the distribution chart that this listing should add to.
+      const valPercent =
+        (listings[i].price - settings.priceRange.min) /
+        (settings.priceRange.max - settings.priceRange.min)
+
+      //Translating the percent above to the bar index
+      const barIndex = Math.ceil(valPercent / barPercent)
+
+      console.log(`barIndex: ${barIndex}`)
+
+      //Adding 1 to the correct bar
+      newPriceBars[barIndex]++
+    }
+
+    setPriceBars([...newPriceBars])
+  }, [listings])
 
   const handleChanges = (value) => {
     const newSettings = {
@@ -24,7 +53,7 @@ const PriceRange = () => {
     setSettings({ ...newSettings })
   }
 
-  //// --Getting the largest value in priceBars to adjust the height of the bars in styling
+  //// --Getting the largest value in priceBars to adjust the height of the bar's styling in JSX below
 
   let highestBarVal = -Infinity
 
@@ -48,9 +77,15 @@ const PriceRange = () => {
     (maxValue - settings.priceRange.min) /
     (settings.priceRange.max - settings.priceRange.min)
 
-  const minIndex = Math.floor(minPercent / barPercent)
+  const minIndex = Math.ceil(minPercent / barPercent)
 
-  const maxIndex = Math.ceil(maxPercent / barPercent)
+  const maxIndex = Math.floor(maxPercent / barPercent)
+
+  //Range
+
+  const Range = Slider.Range
+
+  //JSX
 
   return (
     <div id="price-range-container">
