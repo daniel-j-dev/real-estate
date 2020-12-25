@@ -8,15 +8,17 @@ import PropertyType from "./components/propertyType/PropertyType"
 import PriceRange from "./components/priceRange/PriceRange"
 import Results from "./components/results/Results"
 
-import dummyData from './dummyData'
+import dummyData from "./dummyData"
 
 function App() {
   const [settings, setSettings] = useState({
-    priceRange: { //Settings updates approprately based on listings
-      min: 846, //Lowest price in listings 
+    priceRange: {
+      //Settings updates approprately based on listings
+      min: 846, //Lowest price in listings
       max: 2392, //Highest price in listings
       leftVal: 954, //Left slider handle value
       rightVal: 1800, //Right slider handle value
+      amtOfBars: 28, //How many bars to display in the chart
     },
   })
 
@@ -47,9 +49,9 @@ function App() {
 
     //// --Assigning appropriate height to each bar in the chart
 
-    let newPriceBars = new Array(28).fill([1]).flat()
+    let newPriceBars = new Array(settings.priceRange.amtOfBars).fill([1]).flat()
 
-    const barPercent = 1 / 27 //The percent of the data each bar will represent. 28 bars total (index 0 - 27) so it's 1/27 for the percent in decimal.
+    const barPercent = 1 / (settings.priceRange.amtOfBars - 1) //The percent of the data each bar will represent. Minus 1 because of index starting at 0. Dividing into 1 to get percent as a decimal.
 
     for (let i = 0; i < listings.length; i++) {
       // Finding the percent of the way this price is between the min price and max price. In English, we're finding out which bar in the distribution chart that this listing should add to.

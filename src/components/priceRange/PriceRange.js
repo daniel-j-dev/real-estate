@@ -34,16 +34,7 @@ const PriceRange = () => {
 
   // --Finding what bar each slider handle is on to update the bar colors appropriately
 
-  const barPercent = 1 / 27
-
-  // const minValue = document.getElementsByClassName("rc-slider-handle-1")[0]
-  //   .ariaValueNow
-
-  // const maxValue = document.getElementsByClassName("rc-slider-handle-2")[0]
-  //   .ariaValueNow
-
-  // const minValue = settings.priceRange.dLeftVal
-  // const maxValue = settings.priceRange.dRightVal
+  const barPercent = 1 / (settings.priceRange.amtOfBars - 1)
 
   const minValue = leftVal
 
@@ -100,7 +91,7 @@ const PriceRange = () => {
             backgroundColor: "#287EFF",
           },
         ]}
-        onAfterChange={(value) => handleChanges(value)}
+        onChange={(value) => handleChanges(value)}
       />
       <div id="range-labels">
         <label>{`$${min.toLocaleString()}`}</label>
