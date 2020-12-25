@@ -4,11 +4,11 @@ import ResultItem from "../resultItem/ResultItem"
 import "./Results.css"
 
 const Results = () => {
-  const { listings } = useContext(AppContext)
+  const { listings, settings } = useContext(AppContext)
 
   return (
     <div id="results-container">
-      <h2>Apartments</h2>
+      <h2>{settings.propSearchType}</h2>
       <div id="results">
         {listings.map((l) => (
           <ResultItem

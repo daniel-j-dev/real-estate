@@ -18,22 +18,22 @@ const PropertyType = () => {
       <h4>Property</h4>
       <div id="property-types">
         <button
-          id="house"
-          disabled={pst === "house"}
+          id="Houses"
+          disabled={pst === "Houses"}
           onClick={(event) => handleInput(event)}
         >
           House
         </button>
         <button
-          id="apt"
-          disabled={pst === "apt"}
+          id="Apartments"
+          disabled={pst === "Apartments"}
           onClick={(event) => handleInput(event)}
         >
           Apartment
         </button>
         <button
-          id="room"
-          disabled={pst === "room"}
+          id="Rooms"
+          disabled={pst === "Rooms"}
           onClick={(event) => handleInput(event)}
         >
           Room
