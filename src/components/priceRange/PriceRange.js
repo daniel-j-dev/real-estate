@@ -48,7 +48,7 @@ const PriceRange = () => {
     (maxValue - settings.priceRange.min) /
     (settings.priceRange.max - settings.priceRange.min)
 
-  const minIndex = Math.ceil(minPercent / barPercent)
+  const minIndex = Math.floor(minPercent / barPercent)
 
   const maxIndex = Math.ceil(maxPercent / barPercent)
 
@@ -63,7 +63,7 @@ const PriceRange = () => {
             style={{
               height: `${(val / highestBarVal) * 100}%`,
               backgroundColor: `${
-                index > minIndex && index < maxIndex ? "#287EFF" : "#96dbfa"
+                index >= minIndex && index <= maxIndex ? "#287EFF" : "#96dbfa"
               }`,
             }}
             value={val}
