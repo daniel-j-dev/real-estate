@@ -5,20 +5,61 @@ import "rc-slider/assets/index.css"
 import "./PriceRange.css"
 
 const PriceRange = () => {
-  const { settings, priceBars } = useContext(AppContext)
+  const { settings, setSettings, priceBars } = useContext(AppContext)
 
-  const { min, max, dLeftVal, dRightVal } = settings.priceRange
+  const { min, max, leftVal, rightVal } = settings.priceRange
 
-  //const Range = createSliderWithTooltip(Slider.Range)
   const Range = Slider.Range
 
-  const handleChanges = (value) => {}
+  const handleChanges = (value) => {
+    const newSettings = {
+      ...settings,
+      priceRange: {
+        ...settings.priceRange,
+        leftVal: value[0],
+        rightVal: value[1],
+      },
+    }
 
-  let highestBarVal = -Infinity;
+    setSettings({ ...newSettings })
+  }
 
-  for (let i=0; i<priceBars.length; i++) {
+  //// --Getting the largest value in priceBars to adjust the height of the bars in styling
+
+  let highestBarVal = -Infinity
+
+  for (let i = 0; i < priceBars.length; i++) {
     if (priceBars[i] > highestBarVal) highestBarVal = priceBars[i]
   }
+
+  // --Finding what bar each slider handle is on to update the bar colors appropriately
+
+  const barPercent = 1 / 27
+
+  // const minValue = document.getElementsByClassName("rc-slider-handle-1")[0]
+  //   .ariaValueNow
+
+  // const maxValue = document.getElementsByClassName("rc-slider-handle-2")[0]
+  //   .ariaValueNow
+
+  // const minValue = settings.priceRange.dLeftVal
+  // const maxValue = settings.priceRange.dRightVal
+
+  const minValue = leftVal
+
+  const maxValue = rightVal
+
+  const minPercent =
+    (minValue - settings.priceRange.min) /
+    (settings.priceRange.max - settings.priceRange.min)
+
+  const maxPercent =
+    (maxValue - settings.priceRange.min) /
+    (settings.priceRange.max - settings.priceRange.min)
+
+  const minIndex = Math.ceil(minPercent / barPercent)
+
+  const maxIndex = Math.ceil(maxPercent / barPercent)
 
   return (
     <div id="price-range-container">
@@ -29,7 +70,10 @@ const PriceRange = () => {
             key={index}
             className="bar"
             style={{
-              height: `${(val/highestBarVal)*100}%`,
+              height: `${(val / highestBarVal) * 100}%`,
+              backgroundColor: `${
+                index > minIndex && index < maxIndex ? "#287EFF" : "#96dbfa"
+              }`,
             }}
             value={val}
           ></div>
@@ -39,7 +83,7 @@ const PriceRange = () => {
         allowCross={false}
         min={min}
         max={max}
-        defaultValue={[dLeftVal, dRightVal]}
+        defaultValue={[leftVal, rightVal]}
         handleStyle={[
           {
             backgroundColor: "#287EFF",
@@ -56,7 +100,7 @@ const PriceRange = () => {
             backgroundColor: "#287EFF",
           },
         ]}
-        onChange={(value) => handleChanges(value)}
+        onAfterChange={(value) => handleChanges(value)}
       />
       <div id="range-labels">
         <label>{`$${min.toLocaleString()}`}</label>

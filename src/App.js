@@ -12,11 +12,11 @@ import dummyData from './dummyData'
 
 function App() {
   const [settings, setSettings] = useState({
-    priceRange: {
-      min: 846,
-      max: 2392,
-      dLeftVal: 954, //Default left slider handle value
-      dRightVal: 1200, //Default right slider handle value
+    priceRange: { //Settings updates approprately based on listings
+      min: 846, //Lowest price in listings 
+      max: 2392, //Highest price in listings
+      leftVal: 954, //Left slider handle value
+      rightVal: 1800, //Right slider handle value
     },
   })
 
@@ -72,7 +72,7 @@ function App() {
   return (
     <div className="App">
       <AppContext.Provider
-        value={{ settings, listings, setListings, priceBars }}
+        value={{ settings, setSettings, listings, setListings, priceBars }}
       >
         <div id="upper">
           <Header />
