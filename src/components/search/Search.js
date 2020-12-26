@@ -7,7 +7,7 @@ const Search = () => {
     <div>
       <h4>Location</h4>
       <div id="search-bar">
-        <img src={mg} />
+        <img src={mg} alt='magnifying glass' />
         <input />
       </div>
     </div>

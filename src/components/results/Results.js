@@ -12,6 +12,8 @@ const Results = () => {
       <div id="results">
         {listings.map((l) => (
           <ResultItem
+            listingid={l.id}
+            loved={`${l.id}` in settings.lovedListings ? true : false}
             image={l.image}
             price={l.price}
             address={l.address}

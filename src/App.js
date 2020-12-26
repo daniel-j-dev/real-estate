@@ -13,6 +13,9 @@ import dummyData from "./dummyData"
 function App() {
   const [settings, setSettings] = useState({
     propSearchType: "Apartments",
+    lovedListings: {
+      //This is a hashtable so that we don't have to loop through a list for every apartment to show that you've loved it. The Key is the associated listing id.
+    },
     priceRange: {
       //Settings updates approprately based on listings
       min: 846, //Lowest price in listings

@@ -1,38 +1,55 @@
-#result-item {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    height: 140px;
-    border-radius: 20px;
-    margin-bottom: 20px;
+.result-item {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 120px;
+  padding: 5px;
+  border-radius: 20px;
+  margin-bottom: 20px;
 }
 
-#result-item > img {
-    height: auto;
-    width: 50%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 20px;
+.result-item > img {
+  height: auto;
+  width: 110px;
+  height: 100%; /* #result-item's height minus it's padding. Set width to that for square image */
+  object-fit: cover;
+  margin-right: 10px;
+  border-radius: 20px;
 }
 
-#result-item > #details {
+.result-item > #details {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+  margin-left: 10px;
+  width: 100%;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.result-item > #details > #details-upper {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: flex-start;
-    margin-left: 10px;
-    width: 40%;
+    width: 100%;
+    height: 50%;
 }
 
-#result-item > #details > #price {
-    margin-top: 0px;
+.result-item > #details > #details-upper > #price {
+  margin: 0px;
 }
 
-#result-item > #details > p {
-    font-size: 14px;
-    margin: 0px;
+.result-item > #details > #details-upper > #love {
+    height: 18px;
+    width: 18px;
 }
 
-#result-item > #details > #address {
-    margin-bottom: 5px;
+.result-item > #details > #details-lower > p {
+  margin-bottom: 0px;
+  font-size: 14px;
+}
+
+.result-item > #details > #address {
+  margin-bottom: 5px;
 }

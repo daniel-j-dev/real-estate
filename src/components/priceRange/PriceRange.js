@@ -31,8 +31,6 @@ const PriceRange = () => {
       //Translating the percent above to the bar index
       const barIndex = Math.ceil(valPercent / barPercent)
 
-      console.log(`barIndex: ${barIndex}`)
-
       //Adding 1 to the correct bar
       newPriceBars[barIndex]++
     }
