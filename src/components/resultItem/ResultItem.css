@@ -2,13 +2,13 @@
   display: flex;
   flex-direction: row;
   width: 100%;
-  height: 120px;
+  height: 100px;
   padding: 5px;
   border-radius: 20px;
   margin-bottom: 20px;
 }
 
-.result-item > img {
+.result-item > #photo {
   height: auto;
   width: 110px;
   height: 100%; /* #result-item's height minus it's padding. Set width to that for square image */

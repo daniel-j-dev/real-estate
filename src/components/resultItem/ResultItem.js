@@ -7,8 +7,8 @@ import "./ResultItem.css"
 const ResultItem = ({ listingid, loved, image, price, address, sqFeet }) => {
   const { settings, setSettings } = useContext(AppContext)
 
-  const tapHeart = () => {
-    console.log("tapped")
+  const tapHeart = (event) => {
+    event.stopPropagation()
 
     let newLovedListings = settings.lovedListings
 
@@ -31,7 +31,7 @@ const ResultItem = ({ listingid, loved, image, price, address, sqFeet }) => {
 
   return (
     <div listingid={listingid} className="result-item">
-      <img src={image} />
+      <img id="photo" src={image} alt="property" />
       <div id="details">
         <div id="details-upper">
           <h4 id="price">${price.toLocaleString()}</h4>
@@ -39,7 +39,7 @@ const ResultItem = ({ listingid, loved, image, price, address, sqFeet }) => {
             id="love"
             src={loved ? heartFilled : heart}
             alt={loved ? "filled heart" : "empty heart"}
-            onClick={() => tapHeart()}
+            onClick={(event) => tapHeart(event)}
           />
         </div>
 
