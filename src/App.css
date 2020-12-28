@@ -1,9 +1,6 @@
 @import "~fontsource-poppins/index.css";
 
 .App {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
   background-color: #F5F9FF;
   color: #494949;

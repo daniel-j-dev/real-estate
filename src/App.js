@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react"
+import { BrowserRouter, Route, Switch } from "react-router-dom"
 import AppContext from "./contexts/AppContext"
 import "./App.css"
 
@@ -7,8 +8,9 @@ import Search from "./components/search/Search"
 import PropertyType from "./components/propertyType/PropertyType"
 import PriceRange from "./components/priceRange/PriceRange"
 import Results from "./components/results/Results"
+import PropertyView from "./components/propertyView/PropertyView"
 
-import dummyData from "./dummyData"
+import { properties } from "./dummyData"
 
 function App() {
   const [settings, setSettings] = useState({
@@ -26,7 +28,7 @@ function App() {
     },
   })
 
-  const [listings, setListings] = useState([...dummyData])
+  const [listings, setListings] = useState([...properties])
 
   const [priceBars, setPriceBars] = useState([])
 
@@ -54,24 +56,30 @@ function App() {
 
   return (
     <div className="App">
-      <AppContext.Provider
-        value={{
-          settings,
-          setSettings,
-          listings,
-          setListings,
-          priceBars,
-          setPriceBars,
-        }}
-      >
-        <div id="upper">
-          <Header />
-          <Search />
-          <PropertyType />
-          <PriceRange />
-        </div>
-        <Results />
-      </AppContext.Provider>
+      <BrowserRouter>
+        <AppContext.Provider
+          value={{
+            settings,
+            setSettings,
+            listings,
+            setListings,
+            priceBars,
+            setPriceBars,
+          }}
+        >
+          <Route exact path="/">
+            <div id="upper">
+              <Header />
+              <Search />
+              <PropertyType />
+              <PriceRange />
+            </div>
+            <Results />
+          </Route>
+
+          <Route path="/property/:id" component={PropertyView} />
+        </AppContext.Provider>
+      </BrowserRouter>
     </div>
   )
 }

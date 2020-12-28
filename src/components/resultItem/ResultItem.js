@@ -1,4 +1,5 @@
 import React, { useContext } from "react"
+import { useHistory } from "react-router-dom"
 import AppContext from "../../contexts/AppContext"
 import heart from "../../assets/heart.png"
 import heartFilled from "../../assets/heartFilled.png"
@@ -29,8 +30,18 @@ const ResultItem = ({ listingid, loved, image, price, address, sqFeet }) => {
     }
   }
 
+  const history = useHistory()
+
+  const tappedListing = () => {
+    history.push(`/property/${listingid}`)
+  }
+
   return (
-    <div listingid={listingid} className="result-item">
+    <div
+      listingid={listingid}
+      className="result-item"
+      onClick={() => tappedListing()}
+    >
       <img id="photo" src={image} alt="property" />
       <div id="details">
         <div id="details-upper">
