@@ -12,53 +12,159 @@
   background-color: black;
   border-top-left-radius: 40px;
   border-top-right-radius: 40px;
-  background-color: white;
-  box-shadow: 0px 0px 10px #c3dbff;
+  background-color: #f5f9ff;
+  box-shadow: 0px 0px 10px white;
   width: 100%;
-  padding: 40px 20px 0px 20px;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+}
+
+#listingDetails {
+  padding: 40px 20px 0px 20px;
 }
 
 #info * {
   margin: 0px;
 }
 
-#info > #upperInfo {
+#listingDetails > #upperDetails {
   width: 100%;
   display: flex;
   flex-direction: column;
+  margin-bottom: 24px;
 }
 
-#info > #upperInfo > #addrPrice {
+#addrPrice {
   width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 10px;
 }
 
-#info > #upperInfo > #cityStateType {
+#cityState {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
+  font-size: 14px;
+  margin-bottom: 18px;
+  color: #a5a5a5;
 }
 
-#info > #roomsPets {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+#cityState > img {
+  width: 18px;
+  margin-right: 6px;
 }
 
-#info > #contact {
+#type {
+  background-color: #c3dbff;
+  width: 110px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  color: #287eff;
+}
+
+#roomsPets {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 10px;
+  background-color: white;
+  height: 54px;
+  padding: 0px 14px 0px 14px;
+  font-size: 12px;
+  border-radius: 20px;
 }
 
-#info > #contact > #contactPhoto {
-  width: 50px;
+.infoItem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.infoItem > img {
+  width: 25px;
+  margin-right: 5px !important;
+  object-fit: contain;
+}
+
+#bathSVG {
+  width: 20px;
+}
+
+#pawSVG {
+  height: 22px;
+}
+
+#descriptionContainer {
+  margin-bottom: 10px;
+}
+
+#descriptionContainer > h4 {
+  margin-bottom: 10px;
+}
+
+#descriptionContainer > p {
+  font-size: 14px;
+  color: #a5a5a5;
+}
+
+#contact {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 20px 0px 20px;
+  background-color: #287EFF;
+  height: 100px;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+  color: white;
+}
+
+#contactLeft {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+#contactPhoto {
+  width: 62px;
+  height: 62px;
+  margin-right: 20px;
+  object-fit: cover;
+  border-radius: 50px;
+}
+
+#contactBtns {
+display: flex;
+flex-direction: row;
+width: 90px;
+justify-content: space-between;
+}
+
+#contactBtns > button {
+  background-color: #68A5FF;
+  border: none;
+  border-radius: 12px;
+  height: 40px;
+  width: 40px;
+  outline: none;
+}
+
+#contactBtns > button > img {
+  width: 20px;
+}
+
+#star {
+  width: 10px;
+  margin-right: 5px;
 }
