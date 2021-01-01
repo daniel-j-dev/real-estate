@@ -43,3 +43,5 @@ Phone: https://www.flaticon.com/free-icon/phone-call_126509
 Star: https://www.flaticon.com/free-icon/star_786331?term=star&page=1&position=4&related_item_id=786331 
 
 Message: https://www.seekicon.com/free-icon/message-icon_4 
+
+Left arrow: https://www.flaticon.com/free-icon/left-arrow_120826?k=1609478832629 

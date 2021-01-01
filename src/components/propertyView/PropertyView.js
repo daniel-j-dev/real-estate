@@ -7,6 +7,7 @@ import paw from "../../assets/paw.svg"
 import phone from "../../assets/phone.svg"
 import message from "../../assets/message.svg"
 import star from "../../assets/star.svg"
+import leftArrow from "../../assets/left-arrow.svg"
 import "./PropertyView.css"
 
 const PropertyView = ({ match }) => {
@@ -15,7 +16,9 @@ const PropertyView = ({ match }) => {
   return (
     <div>
       <div id="upperPhoto" style={{ backgroundImage: `url(${prop.image})` }}>
-        <button></button>
+        <button id='backBtn'>
+          <img src={leftArrow} />
+        </button>
       </div>
       <div id="info">
         <div id="listingDetails">

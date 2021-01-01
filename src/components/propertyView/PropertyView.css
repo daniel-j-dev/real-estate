@@ -5,6 +5,20 @@
   position: absolute;
 }
 
+#backBtn {
+  outline: none;
+  border: none;
+  background-color: #c0c0c0b2;
+  border-radius: 20px;
+  width: 54px;
+  height: 54px;
+  margin: 40px 0px 0px 18px;
+}
+
+#backBtn > img {
+  width: 24px;
+}
+
 #info {
   position: absolute;
   margin-top: 40vh;
