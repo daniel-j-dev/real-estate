@@ -1,70 +1,45 @@
-# Getting Started with Create React App
+# Your Next Stay
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A beautiful site for finding your next stay.
 
-## Available Scripts
+`NOTE:` Only styled for mobile so far
 
-In the project directory, you can run:
+Website: https://your-best-stay.herokuapp.com/
 
-### `npm start`
+Made out of love for a design I found on dribbble: https://dribbble.com/shots/14600654-Real-Estate-App-Design
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Technologies
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- React w/ Context API
+- JavaScript
+- HTML
+- CSS
+- rc-slider
 
-### `npm test`
+CSS Normalize: http://necolas.github.io/normalize.css/
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Images
 
-### `npm run build`
+Magnifying glass: https://www.cleanpng.com/png-magnifying-glass-computer-icons-magnification-clip-2151892/ 
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Apartment: https://www.apartmenttherapy.com/modern-design-inspiration-in-a-hand-built-alaska-house-265200 
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Woman’s selfie: https://www.pexels.com/photo/selective-focus-photography-of-woman-1239288/ 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Heart: https://www.kissclipart.com/heart-button-png-clipart-computer-icons-like-butto-yu9mnt/ 
 
-### `npm run eject`
+Location: https://icons-for-free.com/location-131965017472890605/ 
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Bath: https://thenounproject.com/term/shower-bath/62954/ 
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+”shower-bath by Arthur Shlain from the Noun Project”
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Bed: https://icon-icons.com/icon/bed/126393
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Paw: https://en.nureyon.com/paw-2
 
-## Learn More
+Phone: https://www.flaticon.com/free-icon/phone-call_126509 
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Star: https://www.flaticon.com/free-icon/star_786331?term=star&page=1&position=4&related_item_id=786331 
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Message: https://www.seekicon.com/free-icon/message-icon_4 
