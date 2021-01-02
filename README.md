@@ -2,7 +2,12 @@
 
 A beautiful site for finding your next stay.
 
-`NOTE:` Only styled for mobile so far
+<p>
+<img src="screenshots/home.png?raw=true" alt="Bar chart" height="" width="250">
+<img src="screenshots/property-view.png?raw=true" alt="Bar chart" height="" width="250">
+</p>
+
+`NOTE:` Development in progress. It's only styled for mobile so far.
 
 Website: https://your-best-stay.herokuapp.com/
 

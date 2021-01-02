@@ -1,20 +1,21 @@
 import apt from "./assets/apt-1.jpeg"
+import apt2 from "./assets/apt2.PNG"
 import lady from "./assets/lady.jpg"
 
 const properties = [
-  {
-    id: 1,
-    image: apt,
-    price: 846,
-    address: "345 Hamilton Str.",
-    sqFeet: 1211,
-  },
   {
     id: 2,
     image: apt,
     price: 1300,
     address: "345 Hamilton Str.",
     sqFeet: 1211,
+  },
+  {
+    id: 24,
+    image: apt2,
+    price: 960,
+    address: "310 W 76th Ave",
+    sqFeet: 784,
   },
   {
     id: 3,
@@ -164,9 +165,9 @@ const properties = [
     sqFeet: 1211,
   },
   {
-    id: 24,
+    id: 1,
     image: apt,
-    price: 960,
+    price: 846,
     address: "345 Hamilton Str.",
     sqFeet: 1211,
   },
@@ -616,12 +617,12 @@ const propDetails = {
     },
   },
   24: {
-    image: apt,
+    image: apt2,
     price: 960,
-    address: "345 Hamilton Str.",
+    address: "310 W 76th Ave",
     city: "Anchorage",
     state: "Alaska",
-    sqFeet: 1211,
+    sqFeet: 784,
     beds: 3,
     bathrooms: 1,
     pets: true,
